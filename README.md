@@ -7,7 +7,7 @@
 **Flaps**  
 **Spoiler**   
 **Trimm** 
-**Optional** Steuerelemente für Tow Release, Wasserballast, Rad, Elektrik.
+**Optional, Steuerelemente für Tow Release, Wasserballast, Rad, Elektrik**
 
 ## Technik
 
