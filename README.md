@@ -11,9 +11,9 @@
 
 ## Technik
 
-** Arduino UNO mit Mobiflight Software **
-** Kugelgelagerte Linearschienen **
-** verschleissfreie Hall Sensoren **
+**Arduino UNO mit Mobiflight Software**
+**Kugelgelagerte Linearschienen**
+**verschleissfreie Hall Sensoren**
 
 
 
