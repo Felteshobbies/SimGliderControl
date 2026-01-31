@@ -1,5 +1,23 @@
 # SimGliderControl
-Models, Instructions and Software to built a sim glider cockpit control for flaps, spoiler and trim.
+
+**Realistischer präziser Controller für Segelflugzeug-Flugsimulatoren**
+
+![SimGliderControl](docs/images/SimGliderControl.jpg)
+
+**Flaps**  
+**Spoiler**   
+**Trimm** 
+**Optional** Steuerelemente für Tow Release, Wasserballast, Rad, Elektrik.
+
+## Technik
+
+** Arduino UNO mit Mobiflight Software **
+** Kugelgelagerte Linearschienen **
+** verschleissfreie Hall Sensoren **
 
 
-https://github.com/Felteshobbies/SimGliderControl/blob/main/docs/images/SimGliderControl.jpg
+
+
+
+
+
