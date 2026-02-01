@@ -15,6 +15,19 @@
 - **Wear-free Hall effect sensors** for precise, long-lasting position detection
 - **Modular design** - customize to your cockpit needs
 
+## ⚠️ Disclaimer
+
+This project is provided as-is for educational and hobbyist purposes. While every effort has been made to ensure accuracy, the documentation, designs, and instructions may contain errors or omissions.
+
+**Important Notice:**
+- Building and using this controller is **at your own risk**
+- The author(s) assume **no liability** for any damages, injuries, or losses resulting from construction or use
+- Verify all measurements, specifications, and safety considerations before proceeding
+- Electronic components should be handled with appropriate safety precautions
+- If you're unsure about any step, seek advice from experienced makers or professionals
+
+By using these plans and instructions, you acknowledge and accept these terms.
+
 ## Building Your SimGliderControl
 
 ### 3D Printing Instructions
