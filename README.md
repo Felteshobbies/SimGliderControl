@@ -20,11 +20,11 @@
 ### 3D Printing Instructions
 Follow these step-by-step printing guides to create all necessary components:
 
-1. **[Step 1: Base Components](Step1/Print_Instructions-Step1.md)** - Foundation parts including guide shafts, linear guides, and mounting brackets
-2. **[Step 2: Carriage Components](Step2/Print_Instructions-Step2.md)** - Moving parts including guides, handle mounts, and detent holders
-3. **[Step 3: Enclosure and Panel](Step3/Print_Instructions-Step3.md)** - Housing and control panel options
-4. **[Step 4: Control Panel](Step4/Print_Instructions-Step4.md)** - Main cockpit interface panels with optional decals and LED lighting
-5. **[Step 5: Handles and Controls](Step5/Print_Instructions-Step5.md)** - Ergonomic handles, trim knob, and release mechanisms
+1. **[Step 1: Base Components](Step1/Print-Instructions-Step1.md)** - Foundation parts including guide shafts, linear guides, and mounting brackets
+2. **[Step 2: Carriage Components](Step2/Print-Instructions-Step2.md)** - Moving parts including guides, handle mounts, and detent holders
+3. **[Step 3: Enclosure and Panel](Step3/Print-Instructions-Step3.md)** - Housing and control panel options
+4. **[Step 4: Control Panel](Step4/Print-Instructions-Step4.md)** - Main cockpit interface panels with optional decals and LED lighting
+5. **[Step 5: Handles and Controls](Step5/Print-Instructions-Step5.md)** - Ergonomic handles, trim knob, and release mechanisms
 
 ### What You'll Need
 - 3D Printer (min. 250×200×200mm build volume recommended)
