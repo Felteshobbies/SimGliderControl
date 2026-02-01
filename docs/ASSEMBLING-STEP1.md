@@ -6,10 +6,10 @@
 From printing:
 - 3× GliderCtrBase_v1-GuideShaft
 - 2× GliderCtrBase_v1-Mount1Assembly / Mount2Assembly
-- 3× LinearGuide (MGN12B/C rails) (Maybe cleanup from too much oil required)
+- 3× LinearGuide and carriage (MGN12B/C rails) (Maybe cleanup from too much oil required)
 
 Additional hardware:
-- 6× Ball bearings 8×8×3mm
+- 6× Ball bearings 8×3×3mm
 - 12× M3 Allen head screws, 15mm length
 - 6× M3 nuts
 - M3 washers (quantity varies - 2-4 per shaft depending on tolerance)
@@ -22,7 +22,7 @@ Additional hardware:
 
 ### 1.1 Attach Ball Bearings to Control Shafts
 
-Screw a ball bearing (8×8×3mm) to each end of all 3 control shafts using 15mm Allen head screws.
+Screw a ball bearing (8×3×3mm) to each end of all 3 control shafts using 15mm Allen head screws.
 
 **Important:** Depending on your print tolerances, use 1-2 washers on the shaft side. Whether you need more or fewer washers will become apparent only after fixing the linear rails in place.
 
