@@ -5,7 +5,8 @@
 ### Required Parts
 From printing:
 - 3× GliderCtrBase_v1-GuideShaft
-- 2× GliderCtrBase_v1-Mount1Assembly / Mount2Assembly
+- 3× GliderCtrBase_v1-LinearGuide
+- 1× GliderCtrBase_v1-Mount1Assembly and  Mount2Assembly
 - 3× LinearGuide and carriage (MGN12B/C rails) (Maybe cleanup from too much oil required)
 
 Additional hardware:
@@ -21,6 +22,8 @@ Additional hardware:
 ---
 
 ### 1.1 Attach Ball Bearings to Control Shafts
+
+Gently push the LinearGuide into the slot of the GuideShaft. A tight friction fit should hold it in place without glue. If the fit is too loose and has excessive play, ensure the guide is pushed completely to the end of the slot before applying a small amount of glue to secure it.
 
 Screw a ball bearing (8×3×3mm) to each end of all 3 control shafts using 15mm Allen head screws.
 
