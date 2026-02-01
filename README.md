@@ -31,7 +31,9 @@ Follow these step-by-step printing guides to create all necessary components:
 - PLA and PETG filament
 - Arduino UNO
 - 3x Hall effect sensors AS5600 Encoder (23mm x 23mm) with magnet (4mm x 2mm)
-- 3x MGN12 250mm linear rail with MGN12B block
+- 3x MGN12 250mm linear rail with MGN12B carriage
+  **Important:** Design optimized for MGN12B (short carriage) for maximum control travel
+  - MGN12C compatible: mounting holes identical, but reduces available throw by ~8mm per axis
 - Standard hardware (3/4mm screws and nuts, bearings)
 - Basic soldering equipment
 
