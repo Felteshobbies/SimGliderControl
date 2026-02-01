@@ -3,7 +3,7 @@
 ## Step 2: 3D Printing the Carriage Components
 
 ### Carriage Parts - Standard Settings
-**Material:** PETG  BLACK
+**Material:** PETG  (black or dark color)
 **Layer Height:** 0.2 mm  
 **Perimeters:** 4  
 **Infill Density:** 50%  
