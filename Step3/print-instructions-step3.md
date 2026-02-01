@@ -6,6 +6,7 @@
 These cosmetic parts can be printed in your preferred color to match your cockpit setup.
 I prefer to print this on a rough print plate for a good finish
 
+
 ---
 
 ### Enclosure Components - Standard Settings
@@ -23,6 +24,7 @@ I prefer to print this on a rough print plate for a good finish
 
 **OR**
 - 1× `GliderCtrEnclosureAux_v1-PanelFull` *(with cutouts for auxiliary switches and LEDs)*
+*add as33panel.svg if you familiar with mulitmaterial printing*
 
 **Print Notes:** 
 - Choose a color that matches or complements your sim cockpit
