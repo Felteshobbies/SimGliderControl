@@ -39,7 +39,8 @@ Follow these step-by-step printing guides to create all necessary components:
 - Basic soldering equipment
 
 ## Assembly
-*Detailed assembly instructions coming soon*
+
+1. **[Step 1: Base Components](docs/ASSEMBLING-STEP1.md)** 
 
 ## Software Setup
 *Mobiflight configuration guide coming soon*
