@@ -29,7 +29,7 @@ Follow these step-by-step printing guides to create all necessary components:
 ### What You'll Need
 - 3D Printer (min. 250×200×200mm build volume recommended)
 - PLA and PETG filament
-- 1xArduino UNO or another controller 
+- 1x Arduino UNO or another controller of your choice with analog in
 - 3x Hall effect sensors AS5600 Encoder (23mm x 23mm) with magnet (4mm x 2mm)
 - 3x MGN12 250mm linear rail with MGN12B carriage
   **Important:** Design optimized for MGN12B (short carriage) for maximum control travel
