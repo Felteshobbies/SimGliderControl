@@ -138,4 +138,4 @@ Before proceeding, verify:
 
 ---
 
-**Next Step:** Once the carriage assembly is complete and verified, proceed to [Step 3: Calibrating and Wiring](ASSEMBLY_STEP3.md)
+**Next Step:** Once the carriage assembly is complete and verified, proceed to [Step 3: Calibrating and Wiring](ASSEMBLING-STEP3.md)
