@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MobiflightConnector>
+  <outputs />
+  <inputs>
+    <config guid="c9843f09-044a-4d3d-b21c-2a73f5ddb320">
+      <active>true</active>
+      <description>FLAPS</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.5.3.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Uno/ SN-D2B-002" name="FLAPS" type="AnalogInput" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <analog>
+          <onChange type="MSFS2020CustomInputAction" command="@ 210 - 245 / 32766 * 16383 - (&gt;K:AXIS_FLAPS_SET)" presetId="76f85778-a14b-4817-bcee-8ca9ef1dc618" />
+        </analog>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="a00a3718-b0f3-4f6e-8b99-513071a8fe98">
+      <active>true</active>
+      <description>SPOILER</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.5.3.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Uno/ SN-D2B-002" name="SPOLIERS" type="AnalogInput" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <analog>
+          <onChange type="MSFS2020CustomInputAction" command="@ 67 -  223 / 16383 * (&gt;K:AXIS_SPOILER_SET)" presetId="845ca636-852c-4325-a313-85a322c87611" />
+        </analog>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="24ca1042-3286-4b26-8b7a-d234b9b6418b">
+      <active>true</active>
+      <description>TRIM</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.5.3.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Uno/ SN-D2B-002" name="TRIM" type="AnalogInput" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <analog>
+          <onChange type="MSFS2020CustomInputAction" command="@ 211 -  221 / 32766 *  16383 - -16383 max 16383 min (&gt;K:ELEVATOR_TRIM_SET)&#xA;&#xA;" presetId="dfa1e109-b523-45b8-9d28-5e8b13d71dbc" />
+        </analog>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="b8d2a888-511c-4f4e-8653-228a0817b906">
+      <active>true</active>
+      <description>CABLE</description>
+      <settings msdata:InstanceType="MobiFlight.InputConfigItem, MFConnector, Version=10.5.3.0, Culture=neutral, PublicKeyToken=null" serial="MobiFlight Uno/ SN-D2B-002" name="WINCHRELEASE" type="Button" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <button>
+          <onPress type="MSFS2020CustomInputAction" command="(&gt;K:TOW_PLANE_RELEASE)&#xA;" presetId="716c6b2a-7d83-46b5-8f0d-81488e4e46fc" />
+        </button>
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+  </inputs>
+</MobiflightConnector>
