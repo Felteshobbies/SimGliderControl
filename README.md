@@ -53,7 +53,8 @@ Follow these step-by-step printing guides to create all necessary components:
 
 ## Assembly
 
-1. **[Step 1: Base Components](docs/ASSEMBLING-STEP1.md)** 
+1. **[Step 1: Base Components](docs/ASSEMBLING-STEP1.md)**
+2. **[Step 2: Base Components](docs/ASSEMBLING-STEP2.md)** 
 
 ## Software Setup
 *Mobiflight configuration guide coming soon*
