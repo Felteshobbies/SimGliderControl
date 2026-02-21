@@ -87,9 +87,9 @@ Place the detent plate on top for testing and check the spring pressure. The pla
 ![Step 2 Detent Test](images/s2-13.jpg)
 
 **Adjustment:** If pressure is too high or too low, adjust by:
-- Adding/removing springs
+- Adjust spring length
 - Using different spring strengths
-- Adjusting the 10mm screw tension
+
 
 ---
 
@@ -135,7 +135,6 @@ Before proceeding, verify:
 - ☑ All carriages move smoothly over full travel
 - ☑ No excessive play in guides
 - ☑ Detent mechanism engages properly (if installed)
-- ☑ All screws are flush/countersunk
 
 ---
 
