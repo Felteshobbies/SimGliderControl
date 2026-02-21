@@ -63,11 +63,11 @@ Follow these step-by-step printing guides to create all necessary components:
 *Mobiflight configuration guide coming soon*
 
 ## Community
-[Sim Soaring Club Discord](https://discord.com/servers/sim-soaring-club-876123356385149009)
-[Sim Soaring Club](https://simsoaring.club/)
-[B21 Task Planner](https://xp-soaring.github.io/tasks/b21_task_planner/index.html)  
-[WeSimGlide](https://wesimglide.org/)
-[SSC-Tracker ](https://ssc-tracker.org/)
+- [Sim Soaring Club Discord](https://discord.com/servers/sim-soaring-club-876123356385149009)
+- [Sim Soaring Club](https://simsoaring.club/)
+- [B21 Task Planner](https://xp-soaring.github.io/tasks/b21_task_planner/index.html)  
+- [WeSimGlide](https://wesimglide.org/)
+- [SSC-Tracker ](https://ssc-tracker.org/)
 
 ## License
 Attribution-NonCommercial-ShareAlike 4.0 International
