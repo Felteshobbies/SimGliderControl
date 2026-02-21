@@ -121,7 +121,7 @@ Wie und ob sie weitere Funktionen benötigen hängt von der gewünschten Konfigu
 Das ist ein deep dive in die tausenden Möglichen Simvars von mobiflight zum MSFS und anderen.
 
 
-**Next Step:** Once the carriage assembly is complete and verified, proceed to [Step 4: Front plates](ASSEMBLY_STEP4.md)
+**Next Step:** Once the carriage assembly is complete and verified, proceed to [Step 4: Front plates](ASSEMBLING-STEP4.md)
 
 
 
