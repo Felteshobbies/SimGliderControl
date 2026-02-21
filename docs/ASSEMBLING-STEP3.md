@@ -1,133 +1,256 @@
-Step 3: Wiring and calibration
+# SimGliderControl - Assembly Instructions
 
-Montieren und Kalibrieren der Hall Sensoren
+## Step 3: Wiring and Calibration
 
-3x Hall effect sensors AS5600 Encoder (23mm x 23mm) with magnet (4mm x 2mm)
-1x Arduino UNO or compatible
-10x 3 x 5 mm Linsenkopfschrauben 
+### Mounting and Calibrating Hall Effect Sensors
 
-Download and install Mobiflight Software from https://www.mobiflight.com/en/download.html
-(Als Einstieg ist https://docs.mobiflight.com/getting-started/ zu empfehlen)
+### Required Parts
+- 3× Hall effect sensors AS5600 Encoder (23mm × 23mm) with magnet (4mm × 2mm)
+- 1× Arduino UNO or compatible
+- 10× M3 button head screws 5mm length
+- Wire for connections (recommend different colors for VCC, GND, and signal)
+- 12× M4 nuts (for enclosure mounting)
+- 4× M3 nuts (for enclosure attachment)
+- 4× M3 screws 15mm length
 
-Die Hall Sensoren können in 2 Modi betrieben werden, mit einem digitalen Ausgang oder analogen Ausgang.
-Für den Arduino mit Mobiflight Firmware setzen wir hier die analoge Variante ein.
+### Software Required
+- **Mobiflight Software** - Download and install from https://www.mobiflight.com/en/download.html
+- **Getting Started Guide** - https://docs.mobiflight.com/getting-started/ (recommended for beginners)
 
-Der Sensor liefert absolute analoge Werte über den vollen Drehwinkel 0 - 360 Grad.
-Am Pin A0 - A2 am Arduino und dem 10 bit AD Wandler resultiert das bei einem Drehwinkel von ca. 120 Grad in einer Auflösung von ca 210-220 Schritte.
-Achtung! Der Sensor wird an GND  und 3.3V Pin vom Arduino mit strom versorgt!
-Dadurch reduzieren sich die ca 1024 möglichen Werte am Analog Port auf ca. 675. Mit 120 Grad Drehwinkel nochmal auf 1/3 = ca. 220.
-Auf den möglichen controllerweg von ca 180 mm ist die Auflösung damit kleiner als 0.9 mm.
+---
 
-![Step 2 Orientation](images/s3.jpg)
-Für den analogen Betrieb muss GPO und VCC gebrückt werden, entweder wie auf dem Bild oder später über die Stiftleisten.
-Die beiden Stiftleisten müssen rückwärtig angelötet werden. 
+### 3.1 Hall Sensor Operating Mode
 
-Der Magnet muss in den Magnethalter gedrückt werden, er sollte nicht herausfallen, anonsten einen Tropfen Klebstoff dazu.
-Magnet nicht verlieren, sie haben eine spezielle Ausrichtung, die nicht mit herkömlichen Magenten ersetzt werden können.
+The Hall sensors can operate in two modes: digital output or analog output. For Arduino with Mobiflight firmware, we use the **analog variant**.
 
-![Step 2 Orientation](images/s2-9.jpg)
-Die Magnethalter anschliessend fest auf die Imbusschraube der Welle drücken. Sie sollte ebenfalls nicht von selbst herausfallen und sich frei mit der Welle drehen können.
-Einen Hall sensor jeweils testweie einsetzen, sie dürfen nicht kippeln und müssen flach auf allen 4 Schraubensockeln aufliegen.
-Der Magnet darf nicht eingeklemmt werden, der Abstand aber auch nicht zu gross sein. 
-Beim kalibrieren wird die korrekte Funktion überprüft.
+**Technical specifications:**
+- The sensor provides absolute analog values over the full rotation angle 0-360°
+- Connected to pins A0-A2 on Arduino with 10-bit AD converter
+- With ~120° rotation angle, this results in approximately 210-220 steps resolution
+- Over the ~180mm control travel, resolution is less than 0.9mm
 
-Kalibrieren
-![Step 2 Orientation](images/s3-1.jpg)
-Den Arduino an einer der beiden montagepunkte mit M3 Schrauben im Gehäuse befestigen, VCC an 3.3V Pin, GND an einen GND Pin anschliessen.
-OUT an den A0 Pin.
+**⚠️ CRITICAL - Power Supply:**
+The sensor is powered from the Arduino's **GND and 3.3V pins** (NOT 5V!)
 
-![Step 2 Orientation](images/s3-3.jpg)
-![Step 2 Orientation](images/s3-4.jpg)
+This reduces the ~1024 possible values at the analog port to ~675. With 120° rotation angle, this is further reduced by 1/3 ≈ 220 steps.
 
-Arduino mit dem PC verbinden.
-- Mobiflight starten und "Mobiflight Modules" anklicken. Der Arduino sollte in der Modulliste erscheinen, "Compatible" oder "Arduino UNO".
-- Upload/Update Firmware unten anklicken und der Arduino steht anschliessend als Modul bereit.
-- Auf dem Modul mit der rechten Maustaste 3 Analog Ports hinzufügen (A0 - A1)
-- Sensitivity kann auf High (max. AUflösung)
-- ALs Name kann man FLAPS, SPOILERS und TRIM verwenden
-- In der minimalen Ausstattung kann man auch bereits einen beliebigen DIgitalen "Button" Input hinzufügen
-- "Upload config"
-- "save" modul config in a file (*.mfmc)
+---
 
-Ein Mobilflight Setting besteht aus 2 Dateien, einer Modul Config und einem Mapping der Modul Ports zu Sim Variablen.
+### 3.2 Preparing Hall Effect Sensors
 
-im root des Repos befinden sich GliderCtr.mcc für das Mapping und MobiFlightUnoGliderCtr.mfmc für die Module Config als Volrage mit Mapping zu den MSFS Simvars.
-Hier ist das Modul bereits mit den Pins konfiguriert.
-Die mitgeliefert Mobflight Config ist auf einer anderen Hardware ID gemappt, beim ersten Anschluss kann dieser über einen Dialog auf ihren geändert werden.
-Danach beide COnfigs sichern. JEde Änderung an dem Modul erfordert ein erneutes Upload und sichern (mfmc).
-Jedes Ädnern am Mapping ein sichern der mcc Datei.
+![Step 3 Sensor Preparation](images/s3.jpg)
 
-![Step 2 Orientation](images/s2-10.jpg)
-![Step 2 Orientation](images/s3a.jpg)
+**For analog operation:**
+The GPO and VCC pins must be bridged, either as shown in the image or later via the pin headers.
 
-Für die korrekte Orientierung der Sensoren benötigen wir ein konfiguriertes Arduino Modul und Mobiflight.
-Den ersten Hall Sensor anschliessen und erstmal nur lose in einem SLot einsetzen.
-In Mobiflight unter Extra > Setting Logging und Debug aktivieren.
+**Soldering:**
+Both pin headers must be soldered on the **back side** of the sensor board.
 
-Im Log sollten dann Werte vom angeschlossenen Eingang durchlaufen und sich mit dem bewegen des carriage verändern.
-Wenn nicht, das ganze wiring und setting überprüfen.
+**Magnet installation:**
+1. Press the magnet into the magnet holder - it should not fall out
+2. If loose, add a drop of glue
+3. **⚠️ Do not lose the magnet!** They have a special orientation that cannot be replaced with standard magnets
 
+![Step 3 Magnet Holder](images/s2-9.jpg)
 
-![Step 2 Orientation](images/s2-11.jpg)
-Im Beispiel haben wir Korrekte Werte von 170 - 374 = 204 Schritte
-Stellen sie sicher, das über den gesamten controllerweg die werte nicht über 0 laufen.
-Wert1 600 und Wert 2 150 wäre falsch, der minimale Wert muss unter 400 liegen und der maximale Wert entsprechend ca 200 Schritte höher.
-DEr WErt muss später über eine Formel in den für den MSFS erforderlichen Wert von -16383 - +16383 umgerechnet werden.
-Wenn der Wert über 0 läuft, funktioniert die Formel nicht.
+---
 
-Setzen sie den hallsensor um 90 grad gedreht wieder ein, bis sie korrekt incrementieren und fixieren sie ihn anschliessend mit 2 kurzen M3 Schrauben.
-Führen sie das mit allen Sensoren so durch.
-![Step 2 Orientation](images/s2-12.jpg)
-In diesem Fall war die Orientierung bei allen ensoren zufällig identisch.
+### 3.3 Mount Magnet Holders to Shafts
 
-Zuletzt verbinden sie final alle Sensoren mit dem Arduino. Schrauben sie das Gehäuse noch nicht an.
-Starten sie wiederrum Mobiflight. Nun müssen inm mobflight mapping die für jeden sensor korrekten WErte in die FOrmel eingetragen werden.
+Press the magnet holders firmly onto the Allen screw head of each shaft. They should not fall off by themselves and must rotate freely with the shaft.
 
-Bewegen sie jeweils den carriage hin und her und merken sie sich den min und max Wert.
-Tragen sie den Min Wert und die Anzahl der Schritte zu max jeweils korrekt in Formel ein.
-Die Formel ist in Mobiflight nach der polnischen Notation aufgebaut, was bei flaps dem entspricht: = @ - 170 / 204 * 32766 - 16383
-@ steht für den analogen wert am eingang.
+**Test fit each Hall sensor:**
+- Sensors must not wobble
+- Must sit flat on all 4 screw posts
+- Magnet must not be pinched
+- Gap should not be too large (ideally only 1-2 sheets of paper between chip and magnet)
 
-Beispiel für FLaps:
-170 - 374 = 204 Schritte
+Correct function will be verified during calibration.
 
-@ 170 - 204 / 32766 * 16383 - (>K:AXIS_FLAPS_SET)
+---
 
-Beispiel für SPolier:
-67 - 290 = 223 Schritte
+### 3.4 Arduino Installation and Initial Wiring
 
-@ 67 -  223 / 16383 * (>K:AXIS_SPOILER_SET)
+![Step 3 Arduino Mounting](images/s3-1.jpg)
 
-Beispiel für Trim:
-211 - 432 = 221 Schritte
-@ 211 -  221 / 32766 *  16383 - -16383 max 16383 min (>K:ELEVATOR_TRIM_SET)
+1. Mount the Arduino to one of the two mounting points in the enclosure using M3 screws
+2. **Initial wiring for first sensor (A0):**
+   - VCC → Arduino 3.3V pin
+   - GND → Arduino GND pin  
+   - OUT → Arduino A0 pin
 
-Diese Kalbrierung sollte nur einmal notwendig sein.
+![Step 3 Wiring Detail 1](images/s3-3.jpg)
+![Step 3 Wiring Detail 2](images/s3-4.jpg)
 
-Bevor das Gehäuse angeschraubt wird, sollte die Funktion mehrfach überprüft werden, die Hall Sensoren sind so genau, das die Werte an den Endpunkten smax. um 2-3 Schritte varieren.
-Sonst den Magnethalter und den Abstand zum hall Sensor überprüfen, im idealfall passen nur 1-2BLatt Papier zwischen Chip und Magnet.
+---
 
-![Step 2 Orientation](images/s3-5.jpg)
-Setzen sie 12 stck  M4 Muttern jeweils in die Halter auf beiden seiten.
-![Step 2 Orientation](images/s3-6.jpg)
-So weit, dass sie zentriert im Schraubenloch sitzen.
+### 3.5 Mobiflight Firmware Setup
 
-Setzen sie 4 M3 Muttern für die BEfestiung des Gehäuses in den Mount
-Schrauben sie das Gehäuse mit 4 M3 15mm Schrauben an. Klemmen sie dabei keine Kabel ein.
-Je nach Arduino Einbausituation achten sie auf korrekte Verkabelung am Arduino.
-VErwenden Sie weitere Schalter und LEDs am Gehäuse, sollten auch diese bereits verbunden werden.
-Grundsätzlich werden Schalter bei Mobiflight über GND an einen beliebigen I/O Pin geschaltet.
-Wie und ob sie weitere Funktionen benötigen hängt von der gewünschten Konfiguration dem FLugzeug und zur VErfügung stehenden VAriablen ab.
-Das ist ein deep dive in die tausenden Möglichen Simvars von mobiflight zum MSFS und anderen.
+**Connect Arduino to PC and configure:**
 
+1. **Start Mobiflight** and click "Mobiflight Modules"
+2. The Arduino should appear in the module list as "Compatible" or "Arduino UNO"
+3. Click **"Upload/Update Firmware"** at the bottom - the Arduino is then ready as a module
+4. Right-click on the module and **add 3 Analog Ports** (A0, A1, A2)
+5. Set **Sensitivity to High** (maximum resolution)
+6. Use names: **FLAPS**, **SPOILERS**, **TRIM**
+7. For minimal setup, you can also add any digital "Button" input
+8. Click **"Upload config"**
+9. **"Save"** module config to a file (*.mfmc)
 
-**Next Step:** Once the carriage assembly is complete and verified, proceed to [Step 4: Front plates](ASSEMBLING-STEP4.md)
+**Configuration files:**
+A Mobiflight setup consists of 2 files:
+- Module Config (*.mfmc) - defines the hardware pins
+- Mapping (*.mcc) - maps module ports to simulator variables
 
+**Template files included in repository:**
+- `GliderCtr.mcc` - Mapping configuration
+- `MobiFlightUnoGliderCtr.mfmc` - Module configuration with MSFS SimVars
 
+The included Mobiflight config is mapped to a different hardware ID. On first connection, you can change this via a dialog. Then save both configs.
+- Every change to the module requires a new upload and save (mfmc)
+- Every change to the mapping requires saving the mcc file
 
+![Step 3 Mobiflight Setup 1](images/s2-10.jpg)
+![Step 3 Mobiflight Setup 2](images/s3a.jpg)
 
+---
 
+### 3.6 Sensor Orientation and Calibration
 
+For correct sensor orientation, we need a configured Arduino module and Mobiflight.
 
+**Initial sensor test:**
+1. Connect the first Hall sensor and loosely insert it into a slot (don't screw down yet)
+2. In Mobiflight: **Extra > Settings** - enable **Logging and Debug**
+3. In the log, you should see values from the connected input that change when you move the carriage
 
+**⚠️ If no values appear:** Check all wiring and settings
 
+![Step 3 Calibration Values](images/s2-11.jpg)
+
+**Example - Correct values:**
+Range: 170 to 374 = 204 steps
+
+**Critical requirement:**
+Ensure that the values **do not roll over through 0** over the entire control travel.
+- ❌ **Wrong:** Value1 = 600 and Value2 = 150 (rolls through zero)
+- ✅ **Correct:** Minimum value must be below 400, maximum value approximately 200 steps higher
+
+The value must later be converted via a formula to the required MSFS range of -16383 to +16383. **If the value rolls through 0, the formula will not work.**
+
+---
+
+### 3.7 Setting Correct Sensor Orientation
+
+![Step 3 Sensor Orientation](images/s2-12.jpg)
+
+1. **Rotate the sensor 90° and test again** until values increment correctly (no rollover through zero)
+2. Once correct orientation is found, **fix the sensor with 2 short M3 screws**
+3. **Repeat this process for all three sensors**
+
+**Note:** In this example, all sensors happened to have identical orientation by chance. Yours may differ.
+
+---
+
+### 3.8 Final Wiring and Formula Configuration
+
+Connect all sensors to the Arduino:
+- Sensor 1 (FLAPS) → A0
+- Sensor 2 (SPOILERS) → A1  
+- Sensor 3 (TRIM) → A2
+
+**⚠️ Do not screw on the enclosure yet!**
+
+**Start Mobiflight again.** Now the correct values for each sensor must be entered into the formula in the Mobiflight mapping.
+
+---
+
+### 3.9 Calibration Formula Setup
+
+**For each sensor:**
+1. Move the carriage back and forth
+2. Note the **minimum** and **maximum** values
+3. Calculate the **number of steps** (max - min)
+4. Enter the min value and number of steps correctly into the formula
+
+**Formula notation:**
+Mobiflight uses Polish notation (reverse notation).
+
+---
+
+### 3.10 Example Formulas
+
+**Example for FLAPS:**
+- Range: 170 to 374 = 204 steps
+- Formula: `@ 170 - 204 / 32766 * 16383 - (>K:AXIS_FLAPS_SET)`
+- Explanation: @ - 170 / 204 * 32766 - 16383
+
+**Example for SPOILERS:**
+- Range: 67 to 290 = 223 steps
+- Formula: `@ 67 - 223 / 16383 * (>K:AXIS_SPOILER_SET)`
+
+**Example for TRIM:**
+- Range: 211 to 432 = 221 steps
+- Formula: `@ 211 - 221 / 32766 * 16383 - -16383 max 16383 min (>K:ELEVATOR_TRIM_SET)`
+
+**Where:**
+- `@` = the analog value at the input
+- First number = your minimum value
+- Second number = your step count (max - min)
+- Rest = MSFS command
+
+**This calibration should only be necessary once.**
+
+---
+
+### 3.11 Verification Before Final Assembly
+
+Before screwing on the enclosure, verify the function multiple times. The Hall sensors are so accurate that values at the endpoints should vary by a maximum of 2-3 steps.
+
+**If variation is larger:**
+- Check magnet holder alignment
+- Verify distance to Hall sensor
+- Ideally, only 1-2 sheets of paper should fit between chip and magnet
+
+---
+
+### 3.12 Enclosure Assembly
+
+![Step 3 Enclosure Nuts 1](images/s3-5.jpg)
+
+**Insert nuts:**
+1. Insert 12× M4 nuts into the holders on both sides
+
+![Step 3 Enclosure Nuts 2](images/s3-6.jpg)
+
+2. Push them in so they sit centered in the screw holes
+3. Insert 4× M3 nuts for enclosure attachment into the mount
+
+**Final assembly:**
+1. Screw the enclosure on with 4× M3 15mm screws
+2. **Do not pinch any cables!**
+3. Depending on Arduino installation, ensure correct wiring at Arduino
+4. If using additional switches and LEDs on the enclosure, connect these now
+
+**Note on additional inputs:**
+- Switches in Mobiflight are connected via GND to any I/O pin
+- What additional functions you need depends on your desired configuration, the aircraft, and available variables
+- This is a deep dive into the thousands of possible SimVars from Mobiflight to MSFS and other simulators
+
+---
+
+### 3.13 Quality Check Before Proceeding
+
+Before moving to Step 4, verify:
+- ☑ All sensors respond correctly in Mobiflight log
+- ☑ No value rollover through zero
+- ☑ Formulas correctly configured for all three axes
+- ☑ Values stable within 2-3 steps at endpoints
+- ☑ Full travel range works smoothly
+- ☑ All wiring secure and not pinched
+- ☑ Enclosure mounted properly
+
+---
+
+**Next Step:** Once wiring and calibration are complete and verified, proceed to [Step 4: Front Plates Assembly](ASSEMBLY_STEP4.md)
