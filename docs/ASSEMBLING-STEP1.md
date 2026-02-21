@@ -93,4 +93,4 @@ Before moving to Step 2, verify:
 
 ---
 
-**Next Step:** Once the base assembly is complete and verified, proceed to [Step 2: Carriage Assembly](ASSEMBLY_STEP2.md)
+**Next Step:** Once the base assembly is complete and verified, proceed to [Step 2: Carriage Assembly](ASSEMBLING-STEP2.md)
